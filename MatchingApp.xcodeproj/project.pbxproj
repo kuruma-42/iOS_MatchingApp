@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020C101F25FAD546000D6DE2 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020C101E25FAD546000D6DE2 /* UIColor-Extension.swift */; };
 		023FAA2D25F61646000899D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FAA2C25F61646000899D8 /* AppDelegate.swift */; };
 		023FAA2F25F61646000899D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FAA2E25F61646000899D8 /* SceneDelegate.swift */; };
 		023FAA3125F61646000899D8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FAA3025F61646000899D8 /* HomeViewController.swift */; };
@@ -14,9 +15,16 @@
 		023FAA3925F61649000899D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 023FAA3725F61649000899D8 /* LaunchScreen.storyboard */; };
 		023FAA4825F66568000899D8 /* BottomControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FAA4725F66568000899D8 /* BottomControlView.swift */; };
 		023FAA4C25F74D51000899D8 /* UIImage-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FAA4B25F74D51000899D8 /* UIImage-Extension.swift */; };
+		02685A2F25F884F2002251F9 /* TopControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02685A2E25F884F2002251F9 /* TopControlView.swift */; };
+		02685A3325F89507002251F9 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 02685A3225F89507002251F9 /* RxSwift */; };
+		02685A3525F89507002251F9 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 02685A3425F89507002251F9 /* RxCocoa */; };
+		02685A3725F89507002251F9 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 02685A3625F89507002251F9 /* RxRelay */; };
+		02685A3A25F8D83D002251F9 /* UIView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02685A3925F8D83D002251F9 /* UIView-Extension.swift */; };
+		02685A5E25FA2B9C002251F9 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02685A5D25FA2B9C002251F9 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		020C101E25FAD546000D6DE2 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		023FAA2925F61646000899D8 /* MatchingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		023FAA2C25F61646000899D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		023FAA2E25F61646000899D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +34,9 @@
 		023FAA3A25F61649000899D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		023FAA4725F66568000899D8 /* BottomControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomControlView.swift; sourceTree = "<group>"; };
 		023FAA4B25F74D51000899D8 /* UIImage-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage-Extension.swift"; sourceTree = "<group>"; };
+		02685A2E25F884F2002251F9 /* TopControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopControlView.swift; sourceTree = "<group>"; };
+		02685A3925F8D83D002251F9 /* UIView-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-Extension.swift"; sourceTree = "<group>"; };
+		02685A5D25FA2B9C002251F9 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +44,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02685A3725F89507002251F9 /* RxRelay in Frameworks */,
+				02685A3525F89507002251F9 /* RxCocoa in Frameworks */,
+				02685A3325F89507002251F9 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				023FAA4725F66568000899D8 /* BottomControlView.swift */,
+				02685A2E25F884F2002251F9 /* TopControlView.swift */,
+				02685A5D25FA2B9C002251F9 /* CardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -90,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				023FAA4B25F74D51000899D8 /* UIImage-Extension.swift */,
+				02685A3925F8D83D002251F9 /* UIView-Extension.swift */,
+				020C101E25FAD546000D6DE2 /* UIColor-Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -110,6 +128,11 @@
 			dependencies = (
 			);
 			name = MatchingApp;
+			packageProductDependencies = (
+				02685A3225F89507002251F9 /* RxSwift */,
+				02685A3425F89507002251F9 /* RxCocoa */,
+				02685A3625F89507002251F9 /* RxRelay */,
+			);
 			productName = MatchingApp;
 			productReference = 023FAA2925F61646000899D8 /* MatchingApp.app */;
 			productType = "com.apple.product-type.application";
@@ -137,6 +160,9 @@
 				Base,
 			);
 			mainGroup = 023FAA2025F61646000899D8;
+			packageReferences = (
+				02685A3125F89507002251F9 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 023FAA2A25F61646000899D8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -163,10 +189,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02685A2F25F884F2002251F9 /* TopControlView.swift in Sources */,
 				023FAA3125F61646000899D8 /* HomeViewController.swift in Sources */,
 				023FAA2D25F61646000899D8 /* AppDelegate.swift in Sources */,
+				02685A3A25F8D83D002251F9 /* UIView-Extension.swift in Sources */,
+				020C101F25FAD546000D6DE2 /* UIColor-Extension.swift in Sources */,
 				023FAA2F25F61646000899D8 /* SceneDelegate.swift in Sources */,
 				023FAA4825F66568000899D8 /* BottomControlView.swift in Sources */,
+				02685A5E25FA2B9C002251F9 /* CardView.swift in Sources */,
 				023FAA4C25F74D51000899D8 /* UIImage-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,7 +337,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K2VXU7PRJT;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MatchingApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -326,7 +356,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K2VXU7PRJT;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MatchingApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -361,6 +391,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		02685A3125F89507002251F9 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = exactVersion;
+				version = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		02685A3225F89507002251F9 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02685A3125F89507002251F9 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		02685A3425F89507002251F9 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02685A3125F89507002251F9 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		02685A3625F89507002251F9 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02685A3125F89507002251F9 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 023FAA2125F61646000899D8 /* Project object */;
 }
