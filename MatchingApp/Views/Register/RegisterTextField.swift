@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterTextFiled: UITextField {
+class RegisterTextField: UITextField {
     
     init(placeHolder : String) {
         super.init(frame: .zero)

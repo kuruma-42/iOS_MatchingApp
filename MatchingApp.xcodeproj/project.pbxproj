@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		020C101F25FAD546000D6DE2 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020C101E25FAD546000D6DE2 /* UIColor-Extension.swift */; };
+		020C102225FAF98E000D6DE2 /* CardInfoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020C102125FAF98E000D6DE2 /* CardInfoLabel.swift */; };
+		020C102525FB3B76000D6DE2 /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020C102425FB3B76000D6DE2 /* UIButton-Extension.swift */; };
+		020C102825FB3C87000D6DE2 /* CardImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020C102725FB3C87000D6DE2 /* CardImageView.swift */; };
+		020C102B25FE68F5000D6DE2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 020C102A25FE68F5000D6DE2 /* GoogleService-Info.plist */; };
 		023FAA2D25F61646000899D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FAA2C25F61646000899D8 /* AppDelegate.swift */; };
 		023FAA2F25F61646000899D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FAA2E25F61646000899D8 /* SceneDelegate.swift */; };
 		023FAA3125F61646000899D8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FAA3025F61646000899D8 /* HomeViewController.swift */; };
@@ -21,10 +25,17 @@
 		02685A3725F89507002251F9 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 02685A3625F89507002251F9 /* RxRelay */; };
 		02685A3A25F8D83D002251F9 /* UIView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02685A3925F8D83D002251F9 /* UIView-Extension.swift */; };
 		02685A5E25FA2B9C002251F9 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02685A5D25FA2B9C002251F9 /* CardView.swift */; };
+		027CC42525FE72B2006CFEC9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027CC42425FE72B2006CFEC9 /* RegisterViewController.swift */; };
+		027CC42A25FE7A4E006CFEC9 /* RegisterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027CC42925FE7A4E006CFEC9 /* RegisterTextField.swift */; };
+		96AFB7BD7447421EE84DF94C /* Pods_MatchingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BAC6CDF13A3A8998878F90 /* Pods_MatchingApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		020C101E25FAD546000D6DE2 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		020C102125FAF98E000D6DE2 /* CardInfoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoLabel.swift; sourceTree = "<group>"; };
+		020C102425FB3B76000D6DE2 /* UIButton-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton-Extension.swift"; sourceTree = "<group>"; };
+		020C102725FB3C87000D6DE2 /* CardImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageView.swift; sourceTree = "<group>"; };
+		020C102A25FE68F5000D6DE2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		023FAA2925F61646000899D8 /* MatchingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		023FAA2C25F61646000899D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		023FAA2E25F61646000899D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +48,11 @@
 		02685A2E25F884F2002251F9 /* TopControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopControlView.swift; sourceTree = "<group>"; };
 		02685A3925F8D83D002251F9 /* UIView-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-Extension.swift"; sourceTree = "<group>"; };
 		02685A5D25FA2B9C002251F9 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		027CC42425FE72B2006CFEC9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		027CC42925FE7A4E006CFEC9 /* RegisterTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTextField.swift; sourceTree = "<group>"; };
+		5F140ED2613DFF8F3A7E9569 /* Pods-MatchingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchingApp.debug.xcconfig"; path = "Target Support Files/Pods-MatchingApp/Pods-MatchingApp.debug.xcconfig"; sourceTree = "<group>"; };
+		69BAC6CDF13A3A8998878F90 /* Pods_MatchingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88BF804312316BD3DBD3A085 /* Pods-MatchingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchingApp.release.xcconfig"; path = "Target Support Files/Pods-MatchingApp/Pods-MatchingApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +63,7 @@
 				02685A3725F89507002251F9 /* RxRelay in Frameworks */,
 				02685A3525F89507002251F9 /* RxCocoa in Frameworks */,
 				02685A3325F89507002251F9 /* RxSwift in Frameworks */,
+				96AFB7BD7447421EE84DF94C /* Pods_MatchingApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +75,8 @@
 			children = (
 				023FAA2B25F61646000899D8 /* MatchingApp */,
 				023FAA2A25F61646000899D8 /* Products */,
+				5E6DD1FD8AB46398DC7AD3C4 /* Pods */,
+				110087407513A6D6834CF6AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +97,7 @@
 				023FAA2C25F61646000899D8 /* AppDelegate.swift */,
 				023FAA2E25F61646000899D8 /* SceneDelegate.swift */,
 				023FAA3525F61649000899D8 /* Assets.xcassets */,
+				020C102A25FE68F5000D6DE2 /* GoogleService-Info.plist */,
 				023FAA3725F61649000899D8 /* LaunchScreen.storyboard */,
 				023FAA3A25F61649000899D8 /* Info.plist */,
 			);
@@ -88,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				023FAA3025F61646000899D8 /* HomeViewController.swift */,
+				027CC42425FE72B2006CFEC9 /* RegisterViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -95,9 +116,8 @@
 		023FAA4625F6653B000899D8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				023FAA4725F66568000899D8 /* BottomControlView.swift */,
-				02685A2E25F884F2002251F9 /* TopControlView.swift */,
-				02685A5D25FA2B9C002251F9 /* CardView.swift */,
+				027CC42825FE7A30006CFEC9 /* Register */,
+				027CC42725FE7A1F006CFEC9 /* Home */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -108,8 +128,46 @@
 				023FAA4B25F74D51000899D8 /* UIImage-Extension.swift */,
 				02685A3925F8D83D002251F9 /* UIView-Extension.swift */,
 				020C101E25FAD546000D6DE2 /* UIColor-Extension.swift */,
+				020C102425FB3B76000D6DE2 /* UIButton-Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		027CC42725FE7A1F006CFEC9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				023FAA4725F66568000899D8 /* BottomControlView.swift */,
+				02685A2E25F884F2002251F9 /* TopControlView.swift */,
+				02685A5D25FA2B9C002251F9 /* CardView.swift */,
+				020C102125FAF98E000D6DE2 /* CardInfoLabel.swift */,
+				020C102725FB3C87000D6DE2 /* CardImageView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		027CC42825FE7A30006CFEC9 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				027CC42925FE7A4E006CFEC9 /* RegisterTextField.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		110087407513A6D6834CF6AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69BAC6CDF13A3A8998878F90 /* Pods_MatchingApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E6DD1FD8AB46398DC7AD3C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F140ED2613DFF8F3A7E9569 /* Pods-MatchingApp.debug.xcconfig */,
+				88BF804312316BD3DBD3A085 /* Pods-MatchingApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 023FAA3D25F61649000899D8 /* Build configuration list for PBXNativeTarget "MatchingApp" */;
 			buildPhases = (
+				09181D8EE3188261840E1746 /* [CP] Check Pods Manifest.lock */,
 				023FAA2525F61646000899D8 /* Sources */,
 				023FAA2625F61646000899D8 /* Frameworks */,
 				023FAA2725F61646000899D8 /* Resources */,
+				97AB3D3EABD1FDFD69DCA41E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,10 +239,53 @@
 			files = (
 				023FAA3925F61649000899D8 /* LaunchScreen.storyboard in Resources */,
 				023FAA3625F61649000899D8 /* Assets.xcassets in Resources */,
+				020C102B25FE68F5000D6DE2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09181D8EE3188261840E1746 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MatchingApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97AB3D3EABD1FDFD69DCA41E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MatchingApp/Pods-MatchingApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MatchingApp/Pods-MatchingApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MatchingApp/Pods-MatchingApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		023FAA2525F61646000899D8 /* Sources */ = {
@@ -191,12 +294,17 @@
 			files = (
 				02685A2F25F884F2002251F9 /* TopControlView.swift in Sources */,
 				023FAA3125F61646000899D8 /* HomeViewController.swift in Sources */,
+				020C102225FAF98E000D6DE2 /* CardInfoLabel.swift in Sources */,
 				023FAA2D25F61646000899D8 /* AppDelegate.swift in Sources */,
 				02685A3A25F8D83D002251F9 /* UIView-Extension.swift in Sources */,
 				020C101F25FAD546000D6DE2 /* UIColor-Extension.swift in Sources */,
+				020C102525FB3B76000D6DE2 /* UIButton-Extension.swift in Sources */,
 				023FAA2F25F61646000899D8 /* SceneDelegate.swift in Sources */,
+				027CC42A25FE7A4E006CFEC9 /* RegisterTextField.swift in Sources */,
 				023FAA4825F66568000899D8 /* BottomControlView.swift in Sources */,
 				02685A5E25FA2B9C002251F9 /* CardView.swift in Sources */,
+				027CC42525FE72B2006CFEC9 /* RegisterViewController.swift in Sources */,
+				020C102825FB3C87000D6DE2 /* CardImageView.swift in Sources */,
 				023FAA4C25F74D51000899D8 /* UIImage-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +441,7 @@
 		};
 		023FAA3E25F61649000899D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F140ED2613DFF8F3A7E9569 /* Pods-MatchingApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -352,6 +461,7 @@
 		};
 		023FAA3F25F61649000899D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88BF804312316BD3DBD3A085 /* Pods-MatchingApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
