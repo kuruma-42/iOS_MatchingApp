@@ -10,29 +10,27 @@ import UIKit
 class CardInfoLabel: UILabel {
     
     // nope, good label
-    init(frame: CGRect, labelText : String, labelColor : UIColor) {
-        super.init(frame: frame)
+    init(text : String, textColor : UIColor) {
+        super.init(frame: .zero)
         
+        font = .boldSystemFont(ofSize: 45)
+        self.text = text
+        self.textColor = textColor
         
-            font = .boldSystemFont(ofSize: 45)
-            text = labelText
-            textColor = labelColor
-            
-            layer.borderWidth = 3
-            layer.borderColor = labelColor.cgColor
-            layer.cornerRadius = 10
-            
-            textAlignment = .center
-            alpha = 0
+        layer.borderWidth = 3
+        layer.borderColor = textColor.cgColor
+        layer.cornerRadius = 10
+        
+        textAlignment = .center
+        alpha = 0
     }
     
     //ETC label
-    init(frame: CGRect, labelText: String, labelFont: UIFont) {
-        super.init(frame: frame)
-        
-        font = labelFont
+    init(text: String, font: UIFont) {
+        super.init(frame: .zero)
+        self.font = font
         textColor = .white
-        text = labelText
+        self.text = text
         
     }
     
