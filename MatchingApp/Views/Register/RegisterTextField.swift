@@ -15,7 +15,8 @@ class RegisterTextField: UITextField {
         placeholder = placeHolder
         borderStyle = .roundedRect
         font = .systemFont(ofSize: 14)
-        
+//        To solve stron password problem
+        textContentType = .oneTimeCode
     }
     
     required init?(coder: NSCoder) {

@@ -29,6 +29,8 @@
 		027CC42A25FE7A4E006CFEC9 /* RegisterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027CC42925FE7A4E006CFEC9 /* RegisterTextField.swift */; };
 		027CC42F25FF5A6E006CFEC9 /* RegisterTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027CC42E25FF5A6E006CFEC9 /* RegisterTitleLabel.swift */; };
 		027CC43225FF6FDA006CFEC9 /* RegisterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027CC43125FF6FDA006CFEC9 /* RegisterButton.swift */; };
+		027CC44C26007E2D006CFEC9 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027CC44B26007E2D006CFEC9 /* RegisterViewModel.swift */; };
+		027CC4502601B23A006CFEC9 /* Firebase-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027CC44F2601B23A006CFEC9 /* Firebase-Extension.swift */; };
 		96AFB7BD7447421EE84DF94C /* Pods_MatchingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BAC6CDF13A3A8998878F90 /* Pods_MatchingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +56,8 @@
 		027CC42925FE7A4E006CFEC9 /* RegisterTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTextField.swift; sourceTree = "<group>"; };
 		027CC42E25FF5A6E006CFEC9 /* RegisterTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTitleLabel.swift; sourceTree = "<group>"; };
 		027CC43125FF6FDA006CFEC9 /* RegisterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterButton.swift; sourceTree = "<group>"; };
+		027CC44B26007E2D006CFEC9 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		027CC44F2601B23A006CFEC9 /* Firebase-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase-Extension.swift"; sourceTree = "<group>"; };
 		5F140ED2613DFF8F3A7E9569 /* Pods-MatchingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchingApp.debug.xcconfig"; path = "Target Support Files/Pods-MatchingApp/Pods-MatchingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		69BAC6CDF13A3A8998878F90 /* Pods_MatchingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88BF804312316BD3DBD3A085 /* Pods-MatchingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchingApp.release.xcconfig"; path = "Target Support Files/Pods-MatchingApp/Pods-MatchingApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 			children = (
 				023FAA4E25F74D60000899D8 /* Extensions */,
 				023FAA4625F6653B000899D8 /* Views */,
+				027CC44A26007D97006CFEC9 /* ViewModel */,
 				023FAA4425F664D2000899D8 /* ViewController */,
 				023FAA2C25F61646000899D8 /* AppDelegate.swift */,
 				023FAA2E25F61646000899D8 /* SceneDelegate.swift */,
@@ -155,8 +160,17 @@
 				027CC42925FE7A4E006CFEC9 /* RegisterTextField.swift */,
 				027CC42E25FF5A6E006CFEC9 /* RegisterTitleLabel.swift */,
 				027CC43125FF6FDA006CFEC9 /* RegisterButton.swift */,
+				027CC44F2601B23A006CFEC9 /* Firebase-Extension.swift */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		027CC44A26007D97006CFEC9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				027CC44B26007E2D006CFEC9 /* RegisterViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		110087407513A6D6834CF6AA /* Frameworks */ = {
@@ -306,7 +320,9 @@
 				023FAA2D25F61646000899D8 /* AppDelegate.swift in Sources */,
 				02685A3A25F8D83D002251F9 /* UIView-Extension.swift in Sources */,
 				020C101F25FAD546000D6DE2 /* UIColor-Extension.swift in Sources */,
+				027CC4502601B23A006CFEC9 /* Firebase-Extension.swift in Sources */,
 				020C102525FB3B76000D6DE2 /* UIButton-Extension.swift in Sources */,
+				027CC44C26007E2D006CFEC9 /* RegisterViewModel.swift in Sources */,
 				023FAA2F25F61646000899D8 /* SceneDelegate.swift in Sources */,
 				027CC42A25FE7A4E006CFEC9 /* RegisterTextField.swift in Sources */,
 				023FAA4825F66568000899D8 /* BottomControlView.swift in Sources */,

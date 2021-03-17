@@ -8,10 +8,12 @@
 import UIKit
 import RxSwift
 import FirebaseAuth
+import FirebaseFirestore
 
 class RegisterViewController: UIViewController {
     
     private let disposeBag = DisposeBag()
+    private let viewModel = RegisterViewModel()
     
     
     // MARK : UIview
@@ -63,46 +65,58 @@ class RegisterViewController: UIViewController {
     
     private func setupBindings(){
         
+        //textFiled Binding
         nameTextField.rx.text
             .asDriver()
             .drive { [weak self] text in
-                
+                self?.viewModel.nameTextInput.onNext(text ?? "")
             }
             .disposed(by: disposeBag)
         
-        nameTextField.rx.text
+        emailTextField.rx.text
             .asDriver()
             .drive { [weak self] text in
-                
+                self?.viewModel.emailTextInput.onNext(text ?? "")
+
             }
             .disposed(by: disposeBag)
 
-        nameTextField.rx.text
+        passwordTextField.rx.text
             .asDriver()
             .drive { [weak self] text in
-                
+                self?.viewModel.passwordTextInput.onNext(text ?? "")
             }
             .disposed(by: disposeBag)
         
         registerButton.rx.tap
             .asDriver()
             .drive {[weak self] _ in
-                self?.createUserToFireAuth()
+                self?.createUser()
             }
             .disposed(by: disposeBag)
         
-    }
-    
-    private func createUserToFireAuth() {
-        guard let email = emailTextField.text else {return}
-        guard let password = passwordTextField.text else {return}
-        Auth.auth().createUser(withEmail: email, password: password) { (auth, err) in
-            if let err = err {
-                print("AuthInfo Save Failed", err)
-                return
+        // viewmodel binding
+        viewModel.validRegisterDriver
+            .drive { validAll in
+                self.registerButton.isEnabled = validAll
+                self.registerButton.backgroundColor = validAll ? .rgb(red: 227, green: 48, blue: 78) : .init(white: 0.7, alpha: 1)
             }
-            guard let uid = auth?.user.uid else { return }
-            print("AuthInfo Save Success", uid)
+            .disposed(by: disposeBag)
+
+        
+    }
+    private func createUser() {
+        let email = emailTextField.text
+        let password = passwordTextField.text
+        let name = nameTextField.text
+        
+        Auth.createUserToFireAuth(email: email, password: password, name: name) { success in
+            if success {
+                print("Success")
+                self.dismiss(animated: true)
+            } else{
+                
+            }
         }
     }
 }
