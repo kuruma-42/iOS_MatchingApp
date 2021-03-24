@@ -23,6 +23,20 @@ extension Auth {
             }
         }
     }
+    
+    
+    static func loginWithFireAuth(email : String, password : String, completion : @escaping (Bool) -> Void){
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (res, err) in
+            if let err = err {
+                print("Login Failed : ", err)
+                completion(false)
+                return
+            }
+            print("Login Success")
+            completion(true)
+        }
+    }
 }
 
 // MARK : -FIRESTORE
@@ -48,4 +62,21 @@ extension Firestore {
             print("Register User Information Success")
         }
     }
+    
+    // Get Data From FireStore
+    static func fetchUserFromFirestore(uid : String, completion : @escaping (User?) -> Void) {
+        
+        Firestore.firestore().collection("users").document(uid).getDocument { (snapshot, err) in
+            
+            if let err = err {
+                print("Failed to get User Data")
+                completion(nil)
+                return
+            }
+            
+            guard let dic = snapshot?.data() else { return }
+            let user = User(dic: dic)
+            completion(user)
+    }
+}
 }

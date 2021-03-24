@@ -6,24 +6,51 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class HomeViewController: UIViewController {
+    
+    private var user : User?
+    
+    let logoutButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Logout", for: .normal)
+        
+        return button
+    }()
 
+    // MARK : Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupLayout()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            let registerController = RegisterViewController()
-            registerController.modalPresentationStyle = .fullScreen
-            self.present(registerController, animated: true)
-        }
-        
-   
-
-
 }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+//        Firestore.fetchUserFromFirestore(uid: uid)
+        Firestore.fetchUserFromFirestore(uid: uid) { (user) in
+            
+            if let user = user {
+                self.user = user
+            }
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if Auth.auth().currentUser?.uid == nil {
+            let registerController = RegisterViewController()
+            let nav = UINavigationController(rootViewController: registerController)
+            nav.modalPresentationStyle = .fullScreen
+            self.present(nav, animated: true)
+        }
+    }
+    
 
 private func setupLayout(){
     view.backgroundColor = .white
@@ -37,6 +64,7 @@ private func setupLayout(){
     stackView.axis = .vertical
     
     self.view.addSubview(stackView)
+    self.view.addSubview(logoutButton)
     
     [
         topControlView.heightAnchor.constraint(equalToConstant: 100),
@@ -48,6 +76,19 @@ private func setupLayout(){
         stackView.rightAnchor.constraint(equalTo: view.rightAnchor)]
         .forEach { $0.isActive = true}
 
+    logoutButton.anchor(bottom: view.bottomAnchor, left: view.leftAnchor, bottomPadding: 10, leftPadding: 10)
     // Do any additional setup after loading the view.
+    logoutButton.addTarget(self, action: #selector(tappedLogoutButton), for: .touchUpInside)
 }
+    @objc private func tappedLogoutButton() {
+        do {
+            try Auth.auth().signOut()
+            let registerController = RegisterViewController()
+            let nav = UINavigationController(rootViewController: registerController)
+            nav.modalPresentationStyle = .fullScreen
+            self.present(nav, animated: true)
+        } catch{
+            print ("Logout Failed : ", error)
+        }
+    }
 }

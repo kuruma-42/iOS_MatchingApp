@@ -16,4 +16,10 @@ extension UIButton {
         self.imageView?.contentMode = .scaleAspectFit
         return self
     }
+    
+    func createAboutAccount(text: String) -> UIButton {
+        self.titleLabel?.font = .systemFont(ofSize: 14)
+        self.setTitle(text, for: .normal)
+        return self
+    }
 }
