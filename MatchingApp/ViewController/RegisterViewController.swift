@@ -18,7 +18,7 @@ class RegisterViewController: UIViewController {
     
     
     // MARK : UIview
-    private let titleLabel = RegisterTitleLabel(text: "Tinder")
+    private let titleLabel = RegisterTitleLabel(text: "Thumb")
     private let nameTextField = RegisterTextField(placeHolder: "Name")
     private let emailTextField = RegisterTextField(placeHolder: "E-mail")
     private let passwordTextField = RegisterTextField(placeHolder: "Password")

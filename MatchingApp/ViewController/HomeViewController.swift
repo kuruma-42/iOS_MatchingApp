@@ -8,10 +8,18 @@
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
+import PKHUD
 
 class HomeViewController: UIViewController {
     
     private var user : User?
+    
+    //Other Users information except my data
+    private var users = [User]()
+    
+    let topControlView = TopControlView()
+    let cardView = UIView() //cardView
+    let bottomControlView = BottomControlView()
     
     let logoutButton: UIButton = {
         let button = UIButton(type: .system)
@@ -38,6 +46,8 @@ class HomeViewController: UIViewController {
                 self.user = user
             }
         }
+        
+        fetchUsers()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,13 +61,28 @@ class HomeViewController: UIViewController {
         }
     }
     
+    private func fetchUsers() {
+        HUD.show(.progress)
+        Firestore.fetchUsersFromFireStore { (users) in
+            HUD.hide()
+            self.users = users
+            
+            self.users.forEach { (user) in
+                let card = CardView(user: user)
+                self.cardView.addSubview(card)
+                card.anchor(top: self.cardView.topAnchor, bottom: self.cardView.bottomAnchor, left: self.cardView.leftAnchor, right: self.cardView.rightAnchor)
+            
+            }
+            print("Success Get Data ")
+            
+        }
+        
+    }
+    
 
 private func setupLayout(){
     view.backgroundColor = .white
-    
-    let topControlView = TopControlView()
-    let cardView = CardView() //cardView
-    let bottomControlView = BottomControlView()
+
     
     let stackView = UIStackView(arrangedSubviews: [topControlView, cardView, bottomControlView])
     stackView.translatesAutoresizingMaskIntoConstraints = false

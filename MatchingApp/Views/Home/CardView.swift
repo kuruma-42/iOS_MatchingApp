@@ -30,10 +30,10 @@ class CardView : UIView{
 
     private let nopeLabel = CardInfoLabel(text: "NOPE", textColor: .rgb(red: 222, green: 110, blue: 110))
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(user: User) {
+        super.init(frame: .zero)
         
-        setupLayout()
+        setupLayout(user: user)
         setupGradientLayer()
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panCardView))
         self.addGestureRecognizer(panGesture)
@@ -92,7 +92,7 @@ class CardView : UIView{
 
     }
     
-    private func setupLayout() {
+    private func setupLayout(user : User) {
         
         let infoVerticalStackView = UIStackView(arrangedSubviews: [residenceLabel,hobbyLabel,introductionLabel])
         infoVerticalStackView.axis = .vertical
@@ -100,6 +100,7 @@ class CardView : UIView{
         let baseStackView = UIStackView(arrangedSubviews: [infoVerticalStackView, infoButton])
         baseStackView.axis = .horizontal
         
+        //Set Views Location 
         addSubview(cardImageView)
         addSubview(nameLabel)
         addSubview(baseStackView)
@@ -117,6 +118,10 @@ class CardView : UIView{
         nameLabel.anchor(bottom: baseStackView.topAnchor, left: cardImageView.leftAnchor, bottomPadding: 10, leftPadding: 20)
         goodLabel.anchor(top: cardImageView.topAnchor, left: cardImageView.leftAnchor, width: 140, height: 55, topPadding: 25, leftPadding: 20 )
         nopeLabel.anchor(top : cardImageView.topAnchor, right: cardImageView.rightAnchor, width : 140, height: 55, topPadding : 25, rightPadding : 20 )
+        
+        // Apply User Data in View
+        nameLabel.text = user.name
+        introductionLabel.text = user.email
     }
     
     required init?(coder: NSCoder) {

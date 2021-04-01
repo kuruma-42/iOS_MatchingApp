@@ -69,7 +69,7 @@ extension Firestore {
         Firestore.firestore().collection("users").document(uid).getDocument { (snapshot, err) in
             
             if let err = err {
-                print("Failed to get User Data")
+                print("Failed to get User Data", err)
                 completion(nil)
                 return
             }
@@ -79,4 +79,21 @@ extension Firestore {
             completion(user)
     }
 }
+    
+    //Take Other Users Data
+    static func fetchUsersFromFireStore(completion : @escaping([User]) -> Void) {
+        Firestore.firestore().collection("users").getDocuments { (snapshots, err) in
+            if let err = err {
+                print("Failed to get User Data", err)
+                return
+            }
+            
+            let users = snapshots?.documents.map({ (snapshot) -> User in
+                let dic = snapshot.data()
+                let user = User(dic: dic)
+                return user
+            })
+            completion(users ?? [User]())
+        }
+    }
 }
