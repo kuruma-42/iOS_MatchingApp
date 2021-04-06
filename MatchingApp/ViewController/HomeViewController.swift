@@ -9,6 +9,8 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 import PKHUD
+import RxCocoa
+import RxSwift
 
 class HomeViewController: UIViewController {
     
@@ -16,6 +18,7 @@ class HomeViewController: UIViewController {
     
     //Other Users information except my data
     private var users = [User]()
+    private let disposeBag = DisposeBag()
     
     let topControlView = TopControlView()
     let cardView = UIView() //cardView
@@ -33,6 +36,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         setupLayout()
+        setupBindings()
 }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -115,5 +119,17 @@ private func setupLayout(){
         } catch{
             print ("Logout Failed : ", error)
         }
+    }
+    
+    private func setupBindings() {
+        
+        topControlView.profileButton.rx.tap
+            .asDriver()
+            .drive { [weak self] _ in
+                let profile = ProfileViewController()
+                self?.present(profile, animated: true, completion: nil)
+            }.disposed(by: disposeBag)
+
+        
     }
 }

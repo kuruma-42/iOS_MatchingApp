@@ -34,6 +34,9 @@
 		027CC45326022E76006CFEC9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027CC45226022E76006CFEC9 /* LoginViewController.swift */; };
 		027CC457260B1F6D006CFEC9 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 027CC456260B1F6D006CFEC9 /* PKHUD */; };
 		027CC45C260B3499006CFEC9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027CC45B260B3499006CFEC9 /* User.swift */; };
+		0283152D261C463E00964251 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0283152C261C463E00964251 /* ProfileViewController.swift */; };
+		02831531261C8FE600964251 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02831530261C8FE600964251 /* ProfileImageView.swift */; };
+		02831534261C971400964251 /* ProfileLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02831533261C971400964251 /* ProfileLabel.swift */; };
 		96AFB7BD7447421EE84DF94C /* Pods_MatchingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BAC6CDF13A3A8998878F90 /* Pods_MatchingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +66,9 @@
 		027CC44F2601B23A006CFEC9 /* Firebase-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase-Extension.swift"; sourceTree = "<group>"; };
 		027CC45226022E76006CFEC9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		027CC45B260B3499006CFEC9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0283152C261C463E00964251 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		02831530261C8FE600964251 /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
+		02831533261C971400964251 /* ProfileLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLabel.swift; sourceTree = "<group>"; };
 		5F140ED2613DFF8F3A7E9569 /* Pods-MatchingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchingApp.debug.xcconfig"; path = "Target Support Files/Pods-MatchingApp/Pods-MatchingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		69BAC6CDF13A3A8998878F90 /* Pods_MatchingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88BF804312316BD3DBD3A085 /* Pods-MatchingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchingApp.release.xcconfig"; path = "Target Support Files/Pods-MatchingApp/Pods-MatchingApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +132,7 @@
 				023FAA3025F61646000899D8 /* HomeViewController.swift */,
 				027CC42425FE72B2006CFEC9 /* RegisterViewController.swift */,
 				027CC45226022E76006CFEC9 /* LoginViewController.swift */,
+				0283152C261C463E00964251 /* ProfileViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -133,6 +140,7 @@
 		023FAA4625F6653B000899D8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0283152F261C8DE600964251 /* Profile */,
 				027CC42825FE7A30006CFEC9 /* Register */,
 				027CC42725FE7A1F006CFEC9 /* Home */,
 			);
@@ -187,6 +195,15 @@
 				027CC45B260B3499006CFEC9 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0283152F261C8DE600964251 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				02831530261C8FE600964251 /* ProfileImageView.swift */,
+				02831533261C971400964251 /* ProfileLabel.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		110087407513A6D6834CF6AA /* Frameworks */ = {
@@ -346,8 +363,11 @@
 				023FAA2F25F61646000899D8 /* SceneDelegate.swift in Sources */,
 				027CC42A25FE7A4E006CFEC9 /* RegisterTextField.swift in Sources */,
 				023FAA4825F66568000899D8 /* BottomControlView.swift in Sources */,
+				02831531261C8FE600964251 /* ProfileImageView.swift in Sources */,
+				02831534261C971400964251 /* ProfileLabel.swift in Sources */,
 				02685A5E25FA2B9C002251F9 /* CardView.swift in Sources */,
 				027CC42525FE72B2006CFEC9 /* RegisterViewController.swift in Sources */,
+				0283152D261C463E00964251 /* ProfileViewController.swift in Sources */,
 				020C102825FB3C87000D6DE2 /* CardImageView.swift in Sources */,
 				023FAA4C25F74D51000899D8 /* UIImage-Extension.swift in Sources */,
 			);
